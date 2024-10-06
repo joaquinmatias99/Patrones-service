@@ -32,7 +32,7 @@ Este endpoint expone las estadísticas acumuladas de todas las operaciones reali
 - Tener Docker instalado listo para usar 
 
 ## Como Correr el proyecto
-git ad
+
 - Hay que tener Docker instalado
 - Usamos el comando docker run
 - Utilizamos la coleccion postman que se encuentra en ..."ruta"
