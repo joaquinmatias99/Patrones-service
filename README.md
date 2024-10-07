@@ -31,11 +31,34 @@ Este endpoint expone las estadísticas acumuladas de todas las operaciones reali
 
 - Tener Docker instalado listo para usar 
 
-## Como Correr el proyecto
+## Como correr el proyecto - Opción 1
 
-- Hay que tener Docker instalado
-- Usamos el comando docker run
-- Utilizamos la coleccion postman que se encuentra en ..."ruta"
-- ¡Listo para probar!
+1) Hay que tener Docker instalado y abierto.
+2) En el directorio raiz del proyecto, lanzamos el comando para crear el contenedor
+   ```bash
+     docker-compose build
+     ```
+
+3) Luego montamos y lanzamos la imagen con el comando
+     ```bash
+         docker-compose up
+     ```
+     
+4) Utilizamos la coleccion postman que se encuentra en el directorio raiz"
+5) ¡Listo para probar!
 
 
+## Como correr el proyecto - Opción 2
+
+1) Creamos la base de datos con Workbench/XAMP
+2) Creamos la base de datos con el nombre "patrones-service"
+3) Configuramos las variables de entorno de la IDE, en este caso usamos IntelliJ IDEA se hace de la siguiente forma
+
+IMAGEN
+   ```bash
+   spring.datasource.url=jdbc:mysql://localhost:3306/patrones-service?useSSL=false&serverTimezone=UTC
+   spring.datasource.username=admin
+   spring.datasource.password=admin
+   ```
+4) Utilizamos la coleccion postman que se encuentra en el directorio raiz"
+5) ¡Listo para probar! 

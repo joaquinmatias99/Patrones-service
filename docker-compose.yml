@@ -3,7 +3,7 @@ version: '3.8'
 services:
   patrones-service:
     build:
-      context: .  # Esto se refiere al directorio raíz donde está el .jar
+      context: .
     container_name: patrones-service
     mem_limit: 512m
     ports:
