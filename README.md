@@ -2,12 +2,12 @@
 
 Este microservicio clasifica patrones de caracteres en positivos y negativos, almacena los totales acumulados en una base de datos, y expone una API REST para validar los patrones y obtener estadísticas de las verificaciones realizadas.
 
-Tecnologias y dependencias Utilizadas
+## Tecnologias y dependencias Utilizadas
 - Kotlin con JDK 17
 - SpringBoot
 - Hibernate
 - Maven
-- Mysql
+- MySQL
 - Docker
 - Herramienta de prueba Postman
 
@@ -23,18 +23,18 @@ Dado una lista de cadenas que representa patrones de caracteres, el microservici
 Cada validación actualiza las estadísticas almacenadas en la base de datos, incrementando el total de positivos o negativos según corresponda.
 En caso de encontrarse alguno de estos, el servicio devuelve un HTTP 200 OK y en caso no haber ninguno presente, se manda un HTTP 403- FORBIDDEN.
 
+
+
 ### B - Obtener estadisticas acumuladas.
 
 Este endpoint expone las estadísticas acumuladas de todas las operaciones realizadas por el servicio. Devuelve la cantidad total de patrones positivos y negativos.
 
-## Requisitos previos
 
-- Tener Docker instalado listo para usar 
 
 ## Como correr el proyecto - Opción 1
 
 1) Hay que tener Docker instalado y abierto.
-2) En el directorio raiz del proyecto, lanzamos el comando para crear el contenedor
+2) En el directorio raiz del proyecto, a través de CMD lanzamos el comando para crear el contenedor
    ```bash
      docker-compose build
      ```
@@ -44,21 +44,35 @@ Este endpoint expone las estadísticas acumuladas de todas las operaciones reali
          docker-compose up
      ```
      
-4) Utilizamos la coleccion postman que se encuentra en el directorio raiz"
+4) Utilizamos la coleccion postman que se encuentra en el directorio raiz
 5) ¡Listo para probar!
 
 
-## Como correr el proyecto - Opción 2
+## Como correr el proyecto - Opción 2 (Sin docker)
 
-1) Creamos la base de datos con Workbench/XAMP
+1) Abrimos el Workbench ó XAMP para la base de datos.
 2) Creamos la base de datos con el nombre "patrones-service"
 3) Configuramos las variables de entorno de la IDE, en este caso usamos IntelliJ IDEA se hace de la siguiente forma
 
-IMAGEN
+
+   ![Variables de entorno a configurar](assets/aplicationProperties.png)
+
+
+   Copiamos y pegamos lo siguiente
+
    ```bash
    spring.datasource.url=jdbc:mysql://localhost:3306/patrones-service?useSSL=false&serverTimezone=UTC
    spring.datasource.username=admin
    spring.datasource.password=admin
    ```
+
+   ![ConfiguracionVariables de entorno](assets/configuracionVariablesDeEntorno.png)
+
 4) Utilizamos la coleccion postman que se encuentra en el directorio raiz"
 5) ¡Listo para probar! 
+
+## Postman
+
+Con la colecció postman se deberia de poder probar estas funcionalidades.
+
+![Postman](assets/postmanIMG.png)
