@@ -68,11 +68,12 @@ Este endpoint expone las estadísticas acumuladas de todas las operaciones reali
 
    ![ConfiguracionVariables de entorno](assets/configuracionVariablesDeEntorno.png)
 
-4) Utilizamos la coleccion postman que se encuentra en el directorio raiz"
-5) ¡Listo para probar! 
+4) Corremos el proyecto con la IDE normalmente.
+5) Utilizamos la coleccion postman que se encuentra en el directorio raiz
+6) ¡Listo para probar! 
 
 ## Postman
 
-Con la colecció postman se deberia de poder probar estas funcionalidades.
+Con la colección postman se deberia de poder probar estas funcionalidades.
 
 ![Postman](assets/postmanIMG.png)
