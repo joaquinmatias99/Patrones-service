@@ -23,13 +23,13 @@ Dado una lista de cadenas que representa patrones de caracteres, el microservici
 Cada validación actualiza las estadísticas almacenadas en la base de datos, incrementando el total de positivos o negativos según corresponda.
 En caso de encontrarse alguno de estos, el servicio devuelve un HTTP 200 OK y en caso no haber ninguno presente, se manda un HTTP 403- FORBIDDEN.
 
-
+![Postman](assets/postmanPOST.png)
 
 ### B - Obtener estadisticas acumuladas.
 
 Este endpoint expone las estadísticas acumuladas de todas las operaciones realizadas por el servicio. Devuelve la cantidad total de patrones positivos y negativos.
 
-
+![Postman](assets/postmanGET.png)
 
 ## Como correr el proyecto - Opción 1
 
@@ -55,7 +55,8 @@ Este endpoint expone las estadísticas acumuladas de todas las operaciones reali
 3) Configuramos las variables de entorno de la IDE, en este caso usamos IntelliJ IDEA se hace de la siguiente forma
 
 
-   ![Variables de entorno a configurar](assets/aplicationProperties.png)
+
+![Variables de entorno a configurar](assets/aplicationProperties.png)
 
 
    Copiamos y pegamos lo siguiente
@@ -71,9 +72,3 @@ Este endpoint expone las estadísticas acumuladas de todas las operaciones reali
 4) Corremos el proyecto con la IDE normalmente.
 5) Utilizamos la coleccion postman que se encuentra en el directorio raiz
 6) ¡Listo para probar! 
-
-## Postman
-
-Con la colección postman se deberia de poder probar estas funcionalidades.
-
-![Postman](assets/postmanIMG.png)
