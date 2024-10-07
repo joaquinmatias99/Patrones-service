@@ -9,6 +9,7 @@ Este microservicio clasifica patrones de caracteres en positivos y negativos, al
 - Maven
 - MySQL
 - Docker
+- JUnit5 + Mockito
 - Herramienta de prueba Postman
 
 ## Funcionalidad
@@ -30,6 +31,13 @@ En caso de encontrarse alguno de estos, el servicio devuelve un HTTP 200 OK y en
 Este endpoint expone las estadísticas acumuladas de todas las operaciones realizadas por el servicio. Devuelve la cantidad total de patrones positivos y negativos.
 
 ![Postman](assets/postmanGET.png)
+
+## Testings unitarios tanto en el service como en el controller
+
+Se realizaron pruebas unitarias para asegurar el correcto funcionamiento de estos componentes clave. Para ello, se utilizaron herramientas como JUnit y Mockito, que permiten simular los comportamientos de las dependencias y comprobar que cada componente interactúa de manera correcta y se comporta según lo esperado.
+
+
+![testing](assets/testIMG.png)
 
 ## Como correr el proyecto - Opción 1
 
