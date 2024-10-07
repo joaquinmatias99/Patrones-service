@@ -12,11 +12,14 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 
 @Controller
-class PatronController(private val patronService: IPatronService) {
+class PatronController(
+    private val patronService: IPatronService,
+    private val mapper:Mapper
+) {
     @GetMapping("/stats")
     fun getEstadisticas(): ResponseEntity<PatronDTO> {
         val patron = patronService.getEstadisticas()
-        val patronDTO = Mapper.toPatronDTO(patron)
+        val patronDTO = mapper.toPatronDTO(patron)
         return ResponseEntity.ok(patronDTO)
     }
 

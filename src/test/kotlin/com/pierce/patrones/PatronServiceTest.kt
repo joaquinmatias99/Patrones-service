@@ -39,6 +39,7 @@ class PatronServiceTest {
 
         assertEquals(2, patronMock.cantidad_positivos)
         assertEquals(1, patronMock.cantidad_negativos)
+
         verify(patronRepository).save(patronMock)
     }
 
@@ -62,6 +63,8 @@ class PatronServiceTest {
 
         assertEquals(23, resultado.cantidad_positivos)
         assertEquals(2, resultado.cantidad_negativos)
+
+        verify(patronRepository).findById(1L)
     }
 
 
@@ -71,5 +74,7 @@ class PatronServiceTest {
 
         val resultado = patronService.getEstadisticas()
         assertEquals(Patron(1L, 0, 0), resultado)
+
+        verify(patronRepository).findById(1L)
     }
 }
