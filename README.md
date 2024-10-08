@@ -21,6 +21,7 @@ Dado una lista de cadenas que representa patrones de caracteres, el microservici
 - "0RH+" se considera positivo
 - "0RH-" se considera negativo
 
+El patron tiene que aparecer exactamente como dice arriba, dando importancia en las mayusculas y orden de cada caracter.
 Cada validación actualiza las estadísticas almacenadas en la base de datos, incrementando el total de positivos o negativos según corresponda.
 En caso de encontrarse alguno de estos, el servicio devuelve un HTTP 200 OK y en caso no haber ninguno presente, se manda un HTTP 403- FORBIDDEN.
 
@@ -31,6 +32,10 @@ En caso de encontrarse alguno de estos, el servicio devuelve un HTTP 200 OK y en
 Este endpoint expone las estadísticas acumuladas de todas las operaciones realizadas por el servicio. Devuelve la cantidad total de patrones positivos y negativos.
 
 ![Postman](assets/postmanGET.png)
+
+Se hizo un tercer endPoint para poder resetear las estadisticas de las metricas en caso de necesitarse.
+
+![Postman](assets/postmanRESET.png)
 
 ## Testings unitarios tanto en el service como en el controller
 

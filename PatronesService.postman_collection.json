@@ -1,13 +1,22 @@
 {
 	"info": {
-		"_postman_id": "67ecc159-2e0d-48b5-ae97-5a52bd8d9ebd",
+		"_postman_id": "f26e12e4-4b9d-4628-98cd-fc80c20282b9",
 		"name": "PatronesService",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "23485740"
 	},
 	"item": [
 		{
-			"name": "agregarPatrones",
+			"name": "getMetricas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8082/stats"
+			},
+			"response": []
+		},
+		{
+			"name": "sumarMetricas",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -30,11 +39,11 @@
 			"response": []
 		},
 		{
-			"name": "getEstadisticas",
+			"name": "resetearMetricas",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": "http://localhost:8082/stats"
+				"url": "http://localhost:8082/reset"
 			},
 			"response": []
 		}
