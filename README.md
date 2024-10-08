@@ -57,7 +57,7 @@ Se realizaron pruebas unitarias para asegurar el correcto funcionamiento de esto
          docker-compose up
      ```
      
-4) Utilizamos la coleccion postman que se encuentra en el directorio raiz
+4) Utilizamos la [coleccion postman](./PatronesService.postman_collection.json) que se encuentra en el directorio raiz 
 5) ¡Listo para probar!
 
 
@@ -83,5 +83,5 @@ Se realizaron pruebas unitarias para asegurar el correcto funcionamiento de esto
    ![ConfiguracionVariables de entorno](assets/configuracionVariablesDeEntorno.png)
 
 4) Corremos el proyecto con la IDE normalmente.
-5) Utilizamos la coleccion postman que se encuentra en el directorio raiz
+5) Utilizamos la [coleccion postman](./PatronesService.postman_collection.json) que se encuentra en el directorio raiz
 6) ¡Listo para probar! 
