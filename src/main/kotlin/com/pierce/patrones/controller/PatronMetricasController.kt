@@ -32,4 +32,9 @@ class PatronMetricasController(
             ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.message ?: "Error")
         }
     }
+    @PostMapping("/reset")
+    fun resetearMetricas(): ResponseEntity<String> {
+        patronMetricasService.resetearMetricas()
+        return ResponseEntity.ok("Las métricas han sido reiniciadas correctamente")
+    }
 }

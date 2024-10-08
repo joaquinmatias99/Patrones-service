@@ -33,6 +33,15 @@ class PatronMetricasService(private val patronMetricasRepository: IPatronMetrica
         }
     }
 
+    override fun resetearMetricas() {
+        val patronMetricas = patronMetricasRepository.findById(1L).orElseGet { PatronMetricas(1L, 0, 0) }
+        patronMetricas.cantidad_positivos=0
+        patronMetricas.cantidad_negativos=0
+        patronMetricasRepository.save(patronMetricas)
+
+
+    }
+
 
     private fun sumarContadores(contadorPositivo: Int, contadorNegativo: Int) {
         //Obtenemos el patronMetricas, en caso de no haber, creamos uno vacio

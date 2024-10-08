@@ -7,4 +7,6 @@ interface IPatronMetricasService {
     fun addMetricas(adnDTO: AdnDTO)
 
     fun getMetricas(): PatronMetricas
+
+    fun resetearMetricas()
 }

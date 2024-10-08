@@ -77,4 +77,18 @@ class PatronMetricasServiceTest {
 
         verify(patronMetricasRepository).findById(1L)
     }
+
+    @Test
+    fun `Resetear métricas correctamente`() {
+        val patronMetricasMock = PatronMetricas(id = 1L, cantidad_positivos = 23, cantidad_negativos = 10)
+
+        `when`(patronMetricasRepository.findById(1L)).thenReturn(Optional.of(patronMetricasMock))
+
+        patronMetricasService.resetearMetricas()
+
+        assertEquals(0, patronMetricasMock.cantidad_positivos)
+        assertEquals(0, patronMetricasMock.cantidad_negativos)
+
+        verify(patronMetricasRepository).save(patronMetricasMock)
+    }
 }

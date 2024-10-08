@@ -93,5 +93,14 @@ class PatronMetricasControllerTest {
         verify(patronMetricasService).addMetricas(adnDTO)
     }
 
+    @Test
+    fun `Resetear métricas devolver status 200`() {
+        val response: ResponseEntity<String> = patronMetricasController.resetearMetricas()
+
+        verify(patronMetricasService).resetearMetricas()
+
+        assertEquals(HttpStatus.OK, response.statusCode)
+        assertEquals("Las métricas han sido reiniciadas correctamente", response.body)
+    }
 
 }
